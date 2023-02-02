@@ -53,4 +53,3 @@ fcitx5-material-color \
 fcitx5-nord \
 nerd-fonts-jetbrains-mono \
 firefox 
-sh OptionalInstallation.sh

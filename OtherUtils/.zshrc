@@ -19,7 +19,6 @@ export VISUAL='nvim'
 # set proxy
 alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7890"
 alias unsetproxy="unset All_PROXY"
-alias vim="nvim"
 alias vi="nvim"
 
 # make ex the extractor for all kinds of archives
