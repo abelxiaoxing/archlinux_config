@@ -1,0 +1,60 @@
+export ZSH=/usr/share/oh-my-zsh/
+export QT_QPA_PLATFORMTHEME=qt5ct
+ZSH_THEME="random"
+plugins=(rails git textmate ruby lighthouse zsh-navigation-tools zsh-autosuggestions zsh-syntax-highlighting vi-mode command-not-found safe-paste colored-man-pages)
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+source $ZSH/oh-my-zsh.sh
+export PAGER='most'
+setopt GLOB_DOTS
+unsetopt SHARE_HISTORY
+
+# if not running interactively,don't do anything
+[[ $- != *i* ]] && return
+export HISTCONTROL=ignoreboth:erasedups
+
+#make nvim the default editor 
+export EDITOR='vim'
+export VISUAL='vim'
+if [ -d "$HOME/.bin" ] ;
+  then PATH="$HOME/.bin:$PATH"
+fi
+if [ -d "$HOME/.bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+# set proxy
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7890"
+alias unsetproxy="unset All_PROXY"
+### ALIASES ###
+alias vi="nvim"
+alias winegame="/opt/apps/net.winegame.client/files/bin/winegame"
+# make ex the extractor for all kinds of archives
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   tar xf $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+[[ -f ~/.zshrc-persional ]] && .~/.zshrc-personal
+neofetch
+

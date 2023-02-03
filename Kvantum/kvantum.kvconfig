@@ -1,0 +1,5 @@
+[General]
+theme=ArcDark
+
+[Applications]
+Default%23=virtualbox

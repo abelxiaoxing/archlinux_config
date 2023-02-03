@@ -1,0 +1,21 @@
+[org/gnome/desktop/background]
+picture-uri='file:///home/chenxiaoxing/.config/variety/wallpaper/wallpaper-auto-rotated-4131fcc5e0072398513d17306a08a276.jpg'
+
+picture-uri-dark='file:///home/chenxiaoxing/.config/variety/wallpaper/wallpaper-auto-rotated-4131fcc5e0072398513d17306a08a276.jpg'
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///home/chenxiaoxing/.config/variety/wallpaper/wallpaper-auto-rotated-4131fcc5e0072398513d17306a08a276.jpg'
+
+[org/gtk/settings/file-chooser]
+window-position=(645, 2185)
+window-size=(626, 1028)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=152
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
