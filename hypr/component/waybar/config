@@ -1,9 +1,8 @@
 {
 	"layer": "bottom",
     "position": "top",
-	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","tray","wlr/taskbar"],
-	"modules-center": ["wlr/workspaces"],
-	//"modules-center": ["wlr/taskbar"],
+	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","tray","wlr/workspaces"],
+	"modules-center": ["wlr/taskbar"],
 	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
 	
 	"pulseaudio": {
@@ -29,9 +28,6 @@
 		"on-update":""
 	},
 
-    "river/tags": {
-		"num-tags": 9
-    },
 	"network": {
 		"tooltip": true,
 		"format-wifi": "  {essid}",
@@ -102,7 +98,7 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh"
+        "on-click": "bash ~/.config/rofi/leave/leave.sh",
     },
     "custom/updates":{
         "format": "{} Update(s)",
@@ -113,9 +109,7 @@
     },
     "custom/wallpaper":{
         "format":" ",
-        // "on-click": "bash ~/.config/system_scripts/pkill_bc"
-        // 瞬间更换壁纸，比较轻量快捷
+        /* "on-click": "bash ~/.config/system_scripts/pkill_bc" */
         "on-click": "~/.config/hypr/scripts/tools/expand cycle"
-        // 动态逐步更换壁纸，性能要求更高
     }
 }
