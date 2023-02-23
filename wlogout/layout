@@ -1,36 +1,36 @@
 {
     "label" : "lock",
     "action" : "swaylock -i '$(ls ~/.config/backgrounds/* | shuf -n1)'",
-    "text" : "Lock",
-    "keybind" : "l"
+    "text" : "Lock(K)",
+    "keybind" : "k"
 }
 {
     "label" : "hibernate",
     "action" : "systemctl hibernate",
-    "text" : "Hibernate",
+    "text" : "Hibernate(H)",
     "keybind" : "h"
 }
 {
     "label" : "logout",
     "action" : "loginctl terminate-user $USER",
-    "text" : "Logout",
+    "text" : "Logout(L)",
     "keybind" : "e"
 }
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "Shutdown",
+    "text" : "Shutdown(S)",
     "keybind" : "s"
 }
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "Suspend",
+    "text" : "Suspend(U)",
     "keybind" : "u"
 }
 {
     "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "Reboot",
+    "text" : "Reboot(R)",
     "keybind" : "r"
 }
