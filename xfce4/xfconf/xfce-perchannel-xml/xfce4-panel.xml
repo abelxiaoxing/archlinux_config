@@ -109,6 +109,7 @@
         <value type="string" value="网络管理器小程序"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="flameshot"/>
         <value type="string" value="Yakuake"/>
         <value type="string" value="Nutstore"/>
         <value type="string" value="safeeyes_2"/>
