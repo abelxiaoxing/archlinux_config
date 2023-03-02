@@ -1,5 +1,6 @@
 #!/bin/bash
-sh MirrorChange.sh&
+sh SystemChange.sh&
+sh spacevim_install.sh
 # 修改镜像源,修改zsh配置
 # cd ~/.config/Hyprland&&sudo make install&
 # 编译hyprland
