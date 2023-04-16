@@ -39,7 +39,7 @@ package_list=(
     # 音频和视频管理
     aur/wayfire 
     # wayfire桌面
-    waybar 
+    waybar-hyprland 
     # wayland下的bar
     swaybg 
     # wayland下更换壁纸
@@ -93,6 +93,8 @@ package_list=(
     # x11的bar下蓝牙控件
     volumeicon 
     # 音量管理
+    alsa-utils
+    #amixer音频管理
     alacritty 
     # 支持gpu渲染的终端,wayland下无法输入中文,建议用kitty或者konsole代替
     fcitx5-im 
