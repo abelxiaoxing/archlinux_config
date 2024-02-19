@@ -55,6 +55,19 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+z() {
+  if [ -n "$1" ]; then
+    if [ -d "$1" ]; then
+      7z a -mmt8 "$1.7z" "$1"
+    elif [ -f "$1" ]; then
+      7z a -mmt8 "$1.7z" "$1"
+    else
+      echo "Error: '$1' is neither a file nor a directory."
+    fi
+  else
+    echo "Usage: z <file_or_directory>"
+  fi
+}
 [[ -f ~/.zshrc-persional ]] && .~/.zshrc-personal
 neofetch
 
