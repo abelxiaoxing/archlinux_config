@@ -1,6 +1,6 @@
 {
 	"layer": "bottom",
-	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","tray"],
+	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","tray","hyprland/workspaces"],
 	"modules-center": ["wlr/taskbar"],
 	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
 	
@@ -43,6 +43,25 @@
         "on-scroll-up": "xbacklight -inc 1",
 		"on-scroll-down": "xbacklight -dec 1"
 	},
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-active": " {icon} ",
+    "on-click": "activate",
+    "format-icons":{
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active": "",
+      "default": ""
+    }
+  },
     "battery": {
         "states": {
             "good": 95,
@@ -105,7 +124,7 @@
         "format":" ",
         // "on-click": "bash ~/.config/system_scripts/pkill_bc"
         // 瞬间更换壁纸，比较轻量快捷
-        "on-click": "~/.config/scripts/tools/expand cycle"
+        "on-click": "~/.config/hypr/scripts/tools/expand cycle"
         // 动态逐步更换壁纸，性能要求更高
     }
 }
