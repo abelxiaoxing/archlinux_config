@@ -4,7 +4,6 @@
 2. 已完成一些美化工作，仅个人癖好  
 3. 已完成一些快捷型的脚本，例如wayfire环境下的waybar插件  
 4. 快捷键查看处  
-   + wayfire: ~/.config/wayfire.ini
    + i3: ~/.config/i3/config/config
    + hyprland: ~/.config/hypr/hyprland.ini
    + dwm: ~/.config/dwm/

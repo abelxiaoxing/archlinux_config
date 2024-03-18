@@ -1,6 +1,5 @@
 #!/bin/bash
 sh SystemChange.sh&
-sh spacevim_install.sh
 # 修改镜像源,修改zsh配置
 # cd ~/.config/Hyprland&&sudo make install&
 # 编译hyprland
@@ -65,6 +64,8 @@ package_list=(
     # 终端
     dolphin 
     # qt文件管理器
+    breeze-icons
+    # dolphin的图标
     variety 
     # x11下壁纸更换软件,图形化配置策略
     feh 
