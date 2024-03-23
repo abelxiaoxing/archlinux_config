@@ -38,7 +38,7 @@ package_list=(
     # 音频和视频管理
     aur/wayfire 
     # wayfire桌面
-    waybar-hyprland 
+    waybar 
     # wayland下的bar
     swaybg 
     # wayland下更换壁纸
