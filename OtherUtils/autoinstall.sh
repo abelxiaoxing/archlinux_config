@@ -42,6 +42,8 @@ package_list=(
     # wayland下的bar
     swaybg 
     # wayland下更换壁纸
+    swww
+    # wayland下动态更换壁纸
     wofi 
     # wayland下精美程序启动器
     swaylock 
