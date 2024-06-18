@@ -1,13 +1,11 @@
 
 ## 配置文件介绍
-1. 提供了多种配置好统一快捷键的工作环境，比如wayfire,i3,hyprland,xfce4,dwm,lefwwm（个人推荐wayfire和i3。其中个人喜欢纯键盘工作,hyprland的bug多一些，xfce4效率低一些，dwm和leftwm又仅做了快捷键适配，补丁较少接近原版）  
+1. 提供了多种配置好统一快捷键的工作环境，比如i3,hyprland  
 2. 已完成一些美化工作，仅个人癖好  
-3. 已完成一些快捷型的脚本，例如wayfire环境下的waybar插件  
+3. 已完成一些快捷型的脚本，例如hyprland环境下的waybar插件  
 4. 快捷键查看处  
    + i3: ~/.config/i3/config/config
    + hyprland: ~/.config/hypr/hyprland.ini
-   + dwm: ~/.config/dwm/
-   + xfce: 去图形化界面里面自行设置
 
 ## 下载安装相关配置文件
 1. 下载并且进入下载目录（github偶尔抽风，网络实在不行就去浏览器下载，网址https://github.com/abelxiaoxing/.config)  
