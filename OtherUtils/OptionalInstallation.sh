@@ -1,5 +1,5 @@
 #!/bin/bash
-yay -S \
+paru -S \
 neofetch \
 # 系统信息显示
 arc-kde-git \

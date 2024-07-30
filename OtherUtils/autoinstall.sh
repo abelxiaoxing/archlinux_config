@@ -1,11 +1,12 @@
 #!/bin/bash
 sh SystemChange.sh&
 # 修改镜像源,修改zsh配置
-# cd ~/.config/Hyprland&&sudo make install&
 # 编译hyprland
 package_list=(
     neovim
     # 最强编辑器
+    grub-customizer
+    # grub引导器
     htop
     # 系统进程监测
     polkit
@@ -64,6 +65,8 @@ package_list=(
     # gtk文件管理器
     konsole 
     # 终端
+    foot
+    # wayland下终端
     dolphin 
     # qt文件管理器
     breeze-icons
@@ -86,6 +89,10 @@ package_list=(
     # x11的bar下网络控件
     numlockx 
     # 小键盘控制
+    hyprutils
+    # hyprland依赖组件
+    hyprland
+    # wayland下超美桌面
     xfce4 
     # xfce4桌面
     xfce4-goodies 
@@ -112,6 +119,7 @@ package_list=(
     nerd-fonts-jetbrains-mono 
     # 必备字库
     firefox
+    # 浏览器
 )
 
 

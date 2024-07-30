@@ -16,11 +16,11 @@
 3. 执行自动安装脚本  
 `sh autostart.sh`  
 4. 安装好clash后配置好科学上网（自行搭建,本文不提供教程），终端输入setproxy开启终端代理后执行额外组建安装  
-`yay clash-for-windows`  
+`paru clash-for-windows`  
 `sh OptionalInstallation.sh`  
 ## 配置主题与界面  
 ### kvantum环境配置  
-`yay -S kvantum-theme-arc`  
+`paru -S kvantum-theme-arc`  
 + 打开kvantum,应用arc-dark主题
 ### 解决dolphin等界面问题  
 + 修改/etc/profile文件  
