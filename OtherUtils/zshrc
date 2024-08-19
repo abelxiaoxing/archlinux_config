@@ -1,6 +1,6 @@
 export ZSH=/usr/share/oh-my-zsh/
 export QT_QPA_PLATFORMTHEME=qt5ct
-ZSH_THEME="random"
+ZSH_THEME="agnoster"
 plugins=(rails git textmate ruby lighthouse zsh-navigation-tools zsh-autosuggestions zsh-syntax-highlighting vi-mode command-not-found safe-paste colored-man-pages)
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -16,8 +16,8 @@ unsetopt SHARE_HISTORY
 export HISTCONTROL=ignoreboth:erasedups
 
 #make nvim the default editor 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='lvim'
+export VISUAL='lvim'
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
@@ -28,7 +28,7 @@ fi
 alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7890"
 alias unsetproxy="unset All_PROXY"
 ### ALIASES ###
-alias vi="nvim"
+alias vi="lvim"
 alias winegame="/opt/apps/net.winegame.client/files/bin/winegame"
 # make ex the extractor for all kinds of archives
 ex ()
@@ -55,7 +55,20 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-z() {
+zipa() {
+  if [ -n "$1" ]; then
+    if [ -d "$1" ]; then
+      zip -r "$1.zip" "$1"
+    elif [ -f "$1" ]; then
+      zip "$1.zip" "$1"
+    else
+      echo "Error: '$1' is neither a file nor a directory."
+    fi
+  else
+    echo "Usage: z <file_or_directory>"
+  fi
+}
+7za() {
   if [ -n "$1" ]; then
     if [ -d "$1" ]; then
       7z a -mmt8 "$1.7z" "$1"
@@ -68,6 +81,12 @@ z() {
     echo "Usage: z <file_or_directory>"
   fi
 }
-[[ -f ~/.zshrc-persional ]] && .~/.zshrc-personal
-neofetch
+# pnpm
+export PNPM_HOME="/home/abelxiaoxing/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+fastfetch
 

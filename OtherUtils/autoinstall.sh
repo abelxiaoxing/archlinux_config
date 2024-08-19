@@ -1,7 +1,6 @@
 #!/bin/bash
 sh SystemChange.sh&
 # 修改镜像源,修改zsh配置
-# 编译hyprland
 package_list=(
     neovim
     # 最强编辑器
@@ -120,6 +119,9 @@ package_list=(
     # 必备字库
     firefox
     # 浏览器
+    breeze-icons
+    breeze
+    # dolphin中的breeze图标
 )
 
 
@@ -134,8 +136,3 @@ for package in "${package_list[@]}"; do
 done
 
 
-
-# 浏览器 
-sudo cp -rf ~/.config/OtherUtils/zsh-autosuggestions /usr/share/oh-my-zsh/plugins/ &
-sudo cp -rf ~/.config/OtherUtils/zsh-syntax-highlighting /usr/share/oh-my-zsh/plugins/ &
-# oh-my-zsh的自动补全和语法高亮插件

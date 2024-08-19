@@ -17,7 +17,15 @@
 `sh autostart.sh`  
 4. 安装好clash后配置好科学上网（自行搭建,本文不提供教程），终端输入setproxy开启终端代理后执行额外组建安装  
 `paru clash-for-windows`  
-`sh OptionalInstallation.sh`  
+`sh OptionalInstallation.sh` 
+## 输入法配置
+在环境变量配置文件/etc/environment中添加如下内容
+```
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+```
 ## 配置主题与界面  
 ### kvantum环境配置  
 `paru -S kvantum-theme-arc`  
