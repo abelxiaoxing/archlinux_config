@@ -26,7 +26,7 @@ if [ -d "$HOME/.bin" ] ;
 fi
 # set proxy
 alias setproxy="export http_proxy=http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890"
-alias unproxy="unset All_PROXY"
+alias unproxy="unset http_proxy https_proxy"
 ### ALIASES ###
 alias vi="lvim"
 alias winegame="/opt/apps/net.winegame.client/files/bin/winegame"
@@ -45,7 +45,7 @@ ex ()
       *.tgz)       tar xzf $1   ;;
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
+      *.7z)        7z x -mmt=$(nproc) $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
       *.tar.zst)   tar xf $1    ;;
@@ -71,22 +71,16 @@ zipa() {
 7za() {
   if [ -n "$1" ]; then
     if [ -d "$1" ]; then
-      7z a -mmt8 "$1.7z" "$1"
+      7z a -mmt$(nproc) "$1.7z" "$1"
     elif [ -f "$1" ]; then
-      7z a -mmt8 "$1.7z" "$1"
+      7z a -mmt$(nproc) "$1.7z" "$1"
     else
       echo "Error: '$1' is neither a file nor a directory."
     fi
   else
-    echo "Usage: z <file_or_directory>"
+    echo "Usage: 7za <file_or_directory>"
   fi
 }
-# pnpm
-export PNPM_HOME="/home/abelxiaoxing/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 fastfetch
+
 

@@ -1,8 +1,8 @@
 {
 	"layer": "bottom",
-	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","tray","hyprland/workspaces"],
+	"modules-left": ["custom/launcher","cpu","memory","network","custom/media","hyprland/workspaces"],
 	"modules-center": ["wlr/taskbar"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","tray","custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -45,8 +45,9 @@
 	},
   "hyprland/workspaces": {
     "format": "{icon}",
-    "format-active": " {icon} ",
     "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
     "format-icons":{
       "1": "1",
       "2": "2",
@@ -58,9 +59,11 @@
       "8": "8",
       "9": "9",
       "10": "10",
-      "active": "",
-      "default": ""
-    }
+      "focused": "",
+      "default": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
     "battery": {
         "states": {

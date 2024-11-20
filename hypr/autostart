@@ -19,4 +19,4 @@ $scripts/rgb &
 fcitx5 & cfw & foot --server&
 # other
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP 
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
