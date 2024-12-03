@@ -2,8 +2,12 @@
 sh SystemChange.sh&
 # 修改镜像源,修改zsh配置
 package_list=(
+    openssh
+    # ssh服务
     neovim
-    # 最强编辑器
+    # 文本编辑器
+    wl-clipboard
+    # neovim的wayland剪贴板
     grub-customizer
     # grub引导器
     htop
@@ -16,7 +20,7 @@ package_list=(
     # x11下轻量程序驱动器
     catfish 
     # 文件搜索查找
-    ranger 
+    yazi 
     # 命令行形式的文件管理器
     qt5ct 
     # qt5的主题适配工具,很多界面都是由它配置的例如dolphin
@@ -26,8 +30,6 @@ package_list=(
     # x11下截图工具
     grimblast-git 
     # wayland截图工具
-    archlinuxcn/oh-my-zsh-git 
-    # oh-my-zsh终端美化
     sddm 
     # 一种精美的Display Manager,由它来启动桌面
     dunst 
@@ -36,8 +38,6 @@ package_list=(
     # 音量控制软件
     pipewire 
     # 音频和视频管理
-    aur/wayfire 
-    # wayfire桌面
     waybar 
     # wayland下的bar
     swaybg 
@@ -48,8 +48,6 @@ package_list=(
     # wayland下精美程序启动器
     swaylock 
     # 锁屏
-    lightdm 
-    # 一种轻量的Display Manager,由它来启动桌面
     bemenu 
     # wayland下轻量的程序启动器
     wlogout 
@@ -62,14 +60,14 @@ package_list=(
     # 基于ACPIde xbacklight替换
     thunar 
     # gtk文件管理器
-    konsole 
-    # 终端
     foot
     # wayland下终端
     dolphin 
     # qt文件管理器
     breeze-icons
-    # dolphin的图标
+    breeze
+    # dolphin中的breeze图标
+    # 微风图标
     variety 
     # x11下壁纸更换软件,图形化配置策略
     feh 
@@ -92,10 +90,6 @@ package_list=(
     # hyprland依赖组件
     hyprland
     # wayland下超美桌面
-    xfce4 
-    # xfce4桌面
-    xfce4-goodies 
-    # xfce4桌面组件
     conky 
     # 系统信息监测
     blueberry 
@@ -119,11 +113,25 @@ package_list=(
     # 必备字库
     firefox
     # 浏览器
-    breeze-icons
-    breeze
-    # dolphin中的breeze图标
+    fastfetch 
+    # 系统信息显示
+    arc-kde-git 
+    # 桌面主题
+    kvantum 
+    # qt美化
+    archlinux-logout-git 
+    archlinux-logout-themes-git 
+    # arch锁屏功能
+    sddm-config-editor-git 
+    # sddm图形化界面编辑
+    adobe-source-han-sans-cn-fonts 
+    ttf-jetbrains-mono 
+    # 多种字体
+    wps-office-cn 
+    wps-office-mui-zh-cn 
+    ttf-wps-fonts 
+    # wps办公
 )
-
 
 # 循环遍历列表，安装每一个包
 for package in "${package_list[@]}"; do
@@ -136,3 +144,4 @@ for package in "${package_list[@]}"; do
 done
 
 
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
