@@ -191,5 +191,6 @@ style = "Italic"
 family = "monospace"
 style = "Regular"
 
-[shell]
+[terminal]
+[terminal.shell]
 program = "/usr/bin/zsh"
