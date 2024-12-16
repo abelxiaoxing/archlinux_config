@@ -48,7 +48,7 @@ package_list=(
     # wayland下精美程序启动器
     swaylock 
     # 锁屏
-    bemenu 
+    bemenu-wayland 
     # wayland下轻量的程序启动器
     wlogout 
     # wayland下锁屏,重启,关机,注销
