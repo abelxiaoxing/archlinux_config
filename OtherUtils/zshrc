@@ -16,8 +16,8 @@ unsetopt SHARE_HISTORY
 export HISTCONTROL=ignoreboth:erasedups
 
 #make nvim the default editor 
-export EDITOR='lvim'
-export VISUAL='lvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
@@ -28,7 +28,7 @@ fi
 alias setproxy="export http_proxy=http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890"
 alias unproxy="unset http_proxy https_proxy"
 ### ALIASES ###
-alias vi="lvim"
+alias vi="nvim"
 alias winegame="/opt/apps/net.winegame.client/files/bin/winegame"
 # make ex the extractor for all kinds of archives
 ex ()

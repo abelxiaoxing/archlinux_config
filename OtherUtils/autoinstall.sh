@@ -109,8 +109,6 @@ package_list=(
     fcitx5-material-color 
     fcitx5-nord 
     # fcitx5皮肤
-    nerd-fonts-jetbrains-mono 
-    # 必备字库
     firefox
     # 浏览器
     fastfetch 
